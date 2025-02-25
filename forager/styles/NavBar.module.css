@@ -6,9 +6,12 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color: #ffffff;
+    background-color: #579076;
     padding: 10px 0;
-    z-index: 100;
+    z-index: 40;
+    height: 84px;
+    flex-shrink: 0;
+    border-radius: 20px 20px 0px 0px;
   }
   
   .navItem {
