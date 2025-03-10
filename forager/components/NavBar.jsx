@@ -8,17 +8,17 @@ export default function NavBar() {
     <div className={styles.navbar}>
       <Link href="/mushroom" passHref>
         <div className={styles.navItem}>
-          <TbMushroom className="text-white w-6 h-6"/>
+          <img src='navmushroom.svg' className="text-white w-10 h-10"/>
         </div>
       </Link>
       <Link href="/dashboard" passHref>
         <div className={styles.navItem}>
-          <FaHome className="text-white w-6 h-6"/>
+          <img src='home.svg' className="text-white w-10 h-10"/>
         </div>
       </Link>
       <Link href="/photosearch" passHref>
         <div className={styles.navItem}>
-          <FaSearch className="text-white w-6 h-6"/>
+          <img src='camera.svg' className="text-white w-10 h-10"/>
         </div>
       </Link>
     </div>

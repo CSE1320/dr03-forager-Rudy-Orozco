@@ -1,13 +1,20 @@
 import React from 'react';
 import Pill from "./Pill";
 
-const PillList = ({ filterType }) => {
+const PillList = ({ filterType, selectedFilters, toggleFilter }) => {
     return (
-        <div className="w-[321px]">
-            <h1 className='text-[#000] text-[24px] font-[700] mt-[22px]'>{filterType.name}</h1>
-            <div className="flex flex-wrap gap-2 mt-[10px]">
+        <div className="w-80"> 
+            {/* Filter Section */}
+            <h1 className="text-black text-2xl font-bold mt-6">{filterType.name}</h1> 
+            <div className="flex flex-wrap gap-2 mt-2.5">
+                {/* Pass filter data to each pill */}
                 {filterType.pills.map((pill, index) => (
-                    <Pill key={index} pill={pill} />
+                    <Pill 
+                        key={index} 
+                        pill={pill.name} 
+                        isSelected={selectedFilters.includes(pill.name)} 
+                        toggleFilter={toggleFilter} 
+                    />
                 ))}
             </div>
         </div>

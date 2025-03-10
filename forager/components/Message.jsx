@@ -1,14 +1,19 @@
 import React from 'react';
-import {warningMessage} from '../data/development';
 
-const Message = () => {
+const Message = ({msg}) => {
+    console.log(msg)
     return (
-        <div className="message bg-red-500 rounded-xl bg-[#FF5050] text-sm w-full font-medium text-white px-4 py-4 mx-4">
+        // Background Color
+        <div
+            className="message rounded-xl text-sm w-full max-w-md font-medium text-white px-4 py-2 mx-auto"
+            style={{ backgroundColor: msg.color }}>
+
+            {/* Message Content */}
             <div className="header flex items-center">
-                <img width="27px" height="27px" className="" src={warningMessage.icon}></img>
-                <h1 className="uppercase">{warningMessage.header}</h1>
+                <img width="27px" height="27px" className="" src={msg.icon} />
+                <h1 className="uppercase">{msg.header}</h1>
             </div>
-            <p className="">{warningMessage.message}</p>
+            <p>{msg.message}</p>
         </div>
     );
 };

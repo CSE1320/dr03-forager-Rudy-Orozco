@@ -8,11 +8,16 @@ import Pill from "../../components/Pill";
 import PillList from "../../components/PillList";
 import FilterSettings from "../../components/FilterSettings";
 import { mushrooms, Filter } from '../../data/development'; // Adjust the path as necessary
+import MushroomList from "../../components/MushroomList";
+
+const mush = mushrooms;
+const select= mushrooms.mushroom[0];
 
 export default function SandboxPage() {
+
   return (
-    <div className="page flex justify-center items-center flex-col sm:flex-row w-full px-4 absolute top-0 z-50">
-      <FilterSettings Filters={Filter} />
+    <div >
+      <Message />
     </div>
   );
 }
